@@ -33,7 +33,7 @@
         "psr-4": {
             "Tests\\": "tests/"
         },
-        "files"
+        "files": ["tests/helpers.php"]
     },
     "scripts": {
         "fix-cs": [
