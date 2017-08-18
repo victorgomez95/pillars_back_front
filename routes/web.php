@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',        function () { return view('templates.all');});
+Route::get('/apparel', function () { return view('templates.apparel'); });
+Route::get('/eyewear', function () { return view('templates.eyewear'); });
+Route::get('/leather', function () { return view('templates.leather'); });
 
 Auth::routes();
 

@@ -63,33 +63,51 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <script src="{{asset('js/animations.js')}}"></script>
+
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+        <div class="header">
+        </div>
+        <div class="subheader">
+            <div id="subheader-sroll"> 
+                <nav>
+                    <a href="" class="nav-link"> OUR HISTORY </a>
+                    <a href="" class="nav-link"> LOOK BOOK   </a>
+                    <a href="" class="nav-link"> BLOG        </a>
+                    <a href="" class="nav-link"> CONTACT     </a>
+                    <a href="" class="nav-link"> READ ME     </a>
+                </nav>
             </div>
         </div>
+
+        <div class="mainTitle">
+            <em><h2 align="center">Galapagos</h2></em>
+        </div>
+
+        
+
+        <div class="principalGalery">
+            @yield('contenido')
+            
+        </div>
+
+        <div class="spacer"> </div>
+
+
+        <footer >
+            <div class="marcaFooter">
+                <h3><strong>Powered by Squarespace</strong></h3>
+                <ul class="footer_principalOptions">
+                    <li class="divnav-item-footer"> <a href="">Shipping & Returns  </a> </li>
+                    <li class="divnav-item-footer"> <a href="">Terms & Privacy     </a> </li>
+                    <li class="divnav-item-footer"> <a href="">FAQ                 </a> </li>
+                </ul>
+            </div>
+            
+        </footer>
+
     </body>
 </html>
